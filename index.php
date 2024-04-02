@@ -1,3 +1,28 @@
+<?php 
+
+    class Movie {
+        public $title;
+        public $genre;
+        public $year;
+        public $rating;
+
+        public function __construct($title, $genre, $year, $rating) {
+            $this->title = $title;
+            $this->genre = $genre;
+            $this->year = $year;
+            $this->rating = $rating;
+        }
+        public function getMovieInfo() {
+            return $this->title . " - " . $this->genre . " - " . $this->year . " - " . $this->rating;
+        }
+    }
+
+    $movie1 = new Movie("The Matrix", "Sci-Fi", 1999, 8.7);
+    $movie2 = new Movie("The Matrix", "Sci-Fi", 1999, 8.7);
+    $movie3 = new Movie("The Matrix", "Sci-Fi", 1999, 8.7);
+    
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +51,25 @@
 
 
 <body>
-    ciao
+
+    <div id="app" class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Movies</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul>
+                   <?php
+                   echo "<li>" . $movie1->getMovieInfo() . "</li>"; 
+                   
+                   ?>
+                </ul>
+            </div>
+        </div>
+    
+
 
 
 
