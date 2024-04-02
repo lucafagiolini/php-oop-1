@@ -18,8 +18,8 @@
     }
 
     $movie1 = new Movie("The Matrix", "Sci-Fi", 1999, 8.7);
-    $movie2 = new Movie("The Matrix", "Sci-Fi", 1999, 8.7);
-    $movie3 = new Movie("The Matrix", "Sci-Fi", 1999, 8.7);
+    $movie2 = new Movie("The Matrix Reloaded", "Sci-Fi", 2003, 7.2);
+    $movie3 = new Movie("The Matrix Revolutions", "Sci-Fi", 2003, 6.7);
     
     ?>
 
@@ -50,7 +50,7 @@
 
 
 
-<body>
+<body data-bs-theme="dark">
 
     <div id="app" class="container">
         <div class="row">
@@ -60,9 +60,11 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <ul>
+                <ul class='justify-content-center text-center'>
                    <?php
-                   echo "<li>" . $movie1->getMovieInfo() . "</li>"; 
+                   echo "<li>" . $movie1->getMovieInfo() . "</li>";
+                     echo "<li>" . $movie2->getMovieInfo() . "</li>";
+                        echo "<li>" . $movie3->getMovieInfo() . "</li>";
                    
                    ?>
                 </ul>
